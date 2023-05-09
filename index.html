@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!----===== Icones CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>GControle</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="./Images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">GControle</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#dashboard">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="#reservas">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Reservas</span>
+                    </a></li>
+                <li><a href="#ocorrencias">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Ocorrências</span>
+                    </a></li>
+                <li><a href="#visitantes">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">Visitantes</span>
+                    </a></li>
+                <li><a href="#assembleias">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">Assembleias</span>
+                    </a></li>
+                <li><a href="#emergencias">
+                        <i class="uil uil-exclamation-triangle"></i>
+                        <span class="link-name">Emergencias</span>
+                    </a></li>
+                <li><a href="#boletos">
+                        <i class="uil uil-files-landscapes-alt"></i>
+                        <span class="link-name">2a Via Boletos</span>
+                    </a></li>
+                <li><a href="#classificados">
+                        <i class="uil uil-newspaper"></i>
+                        <span class="link-name">Classificados</span>
+                    </a></li>
+                <li><a href="#cadastros">
+                        <i class="uil uil-plus-square"></i>
+                        <span class="link-name">Cadastros</span>
+                    </a></li>
+                <li><a href="#veiculos">
+                        <i class="uil uil-car"></i>
+                        <span class="link-name">Veiculos</span>
+                    </a></li>
+                <li><a href="#financeiro">
+                        <i class="uil uil-money-bill"></i>
+                        <span class="link-name">Financeiro</span>
+                    </a></li>
+                <li><a href="#activity-data">
+                        <i class="uil uil-clock-three"></i>
+                        <span class="link-name">Recentes</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="indexinicial.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Sair</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Modo escuro</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="dashboard" class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="images/profile.jpeg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <span class="text">Saldo</span>
+                        <span class="number">R$ 70.342,45</span>
+                    </div>
+                    <div class="box box2">
+                        <span class="text">A pagar</span>
+                        <span class="number">R$ 20.120,45</span>
+                    </div>
+                    <div class="box box3">
+                        <span class="text">A receber</span>
+                        <span class="number">R$ 27.120,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reservas" class="reservas">
+                <div class="title">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="text">Reservas</span>
+                </div>
+
+                <button class="all-button" onclick="openModal(2)">Churrasqueiras</button>
+                <button class="all-button" onclick="openModal(3)">Mudanças</button>
+                <button class="all-button" onclick="openModal(4)">Quadras</button>
+                <button class="all-button" onclick="openModal(5)">Academias</button>
+                <button class="all-button" onclick="openModal(6)">Salões de Festa</button>
+
+                <div id="modal-2" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2" onclick="closeModal(2)">&times;</span>
+                        <div class="modal-title">Reservar Churrasqueira</div>
+                        <div class="modal-bodyform">
+                            <form id="churrasqueiras-form"
+                                onsubmit="event.preventDefault(); confirmReservation('churrasqueiras')">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required>
+
+                                <label for="date">Data:</label>
+                                <input type="date" id="date" name="date" required>
+
+                                <label for="time">Horário:</label>
+                                <input type="time" id="time" name="time" required>
+
+                                <label for="guests">Número de convidados:</label>
+                                <input type="number" id="guests" name="guests" required>
+
+                                <input id="chualert" type="submit" value="Enviar"
+                                    onclick="alert('Churrasqueira reservada!')">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-3" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" onclick="closeModal(3)">&times;</span>
+                    <div class="modal-title">Reservar Mudança</div>
+                    <div class="modal-bodyform">
+                        <form id="mudancas-form" onsubmit="event.preventDefault(); confirmReservation('mudancas')">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="date">Data:</label>
+                            <input type="date" id="date" name="date" required>
+
+                            <label for="time">Horário:</label>
+                            <input type="time" id="time" name="time" required>
+
+                            <label for="address">Endereço:</label>
+                            <input type="text" id="address" name="address" required>
+
+                            <input id="mualert" type="submit" value="Enviar" onclick="alert('Mudança reservada!')">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-4" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" onclick="closeModal(4)">&times;</span>
+                    <div class="modal-title">Reservar Quadra</div>
+                    <div class="modal-bodyform">
+                        <form>
+                            <form id="quadras-form" onsubmit="event.preventDefault(); confirmReservation('quadras')">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="date">Data:</label>
+                                <input type="date" id="date" name="date" required>
+
+                                <label for="time">Horário:</label>
+                                <input type="time" id="time" name="time" required>
+
+                                <label for="sport">Esporte:</label>
+                                <select id="sport" name="sport" required>
+                                    <option value="">-- Selecione um esporte --</option>
+                                    <option value="futebol">Futebol</option>
+                                    <option value="basquete">Basquete</option>
+                                    <option value="volei">Vôlei</option>
+                                </select>
+
+                                <input id="quaalert" type="submit" value="Enviar" onclick="alert('Quadra reservada!')">
+                            </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-5" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" onclick="closeModal(5)">&times;</span>
+                    <div class="modal-title">Reservar Academia</div>
+                    <div class="modal-bodyform">
+                        <form id="academias-form" onsubmit="event.preventDefault(); confirmReservation('academias')">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="date">Data:</label>
+                            <input type="date" id="date" name="date" required>
+
+                            <label for="time">Horário:</label>
+                            <input type="time" id="time" name="time" required>
+
+                            <input id="acadalert" type="submit" value="Enviar" onclick="alert('Academia reservada!')">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-6" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2" onclick="closeModal(6)">&times;</span>
+                    <div class="modal-title">Reservar Salão de Festa</div>
+                    <div class="modal-bodyform">
+                        <form id="saloes-form" onsubmit="event.preventDefault(); confirmReservation('saloes')">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="date">Data:</label>
+                            <input type="date" id="date" name="date" required>
+
+                            <label for="time">Horário:</label>
+                            <input type="time" id="time" name="time" required>
+
+                            <label for="guests">Número de convidados:</label>
+                            <input type="number" id="guests" name="guests" required>
+
+                            <input id="salaoalert" type="submit" value="Enviar"
+                                onclick="alert('Salão de festas reservado!')">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ocorrencias" class="ocorrencias">
+                <div class="title">
+                    <i class="uil uil-chart"></i>
+                    <span class="text">Ocorrências</span>
+                </div>
+
+                <button class="ocorrencia-button" onclick="openModal(1)">Registrar Ocorrências</button>
+
+                <div id="modal-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal(1)">&times;</span>
+                        <div class="modal-title">Registrar Ocorrência</div>
+                        <div class="modal-body">
+                            <div class="chat">
+                                <div class="chat-input">
+                                    <input type="text" placeholder="Registre sua ocorrência">
+                                    <button>Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="visitantes" class="visitantes">
+                <div class="title">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="text">Visitantes</span>
+                </div>
+
+                <button class="all-button" onclick="openModal(7)">Agenda de Visitas</button>
+                <button class="all-button" onclick="openModal(15)">Gerar convites (Piscina)</button>
+                <button class="all-button" onclick="openModal(16)">Histórico de Visitantes</button>
+
+                <div id="modal-7" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2" onclick="closeModal(7)">&times;</span>
+                        <div class="modal-bodyform">
+                            <h2>Agenda de Visitantes</h2>
+                            <form id="visitor-form">
+                                <label for="visitor-name">Nome do Visitante:</label>
+                                <input type="text" id="visitor-name" name="visitor-name" required>
+                                <label for="visitor-date">Data de Visita:</label>
+                                <input type="date" id="visitor-date" name="visitor-date" required>
+                                <label for="visitor-time">Horário de Visita:</label>
+                                <input type="time" id="visitor-time" name="visitor-time" required>
+                                <input id="agevialert" type="submit" value="Enviar" onclick="alert('Visita agendada!')">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-15" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2" onclick="closeModal(15)">&times;</span>
+                        <div class="modal-body">
+                            <h2>Convites</h2>
+                            <li><a href="./Images/convite.png" id="generate-invite-link" target="_blank">Gerar
+                                    convite para a piscina</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-16" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2" onclick="closeModal(16)">&times;</span>
+                        <div class="modal-body">
+                            <h1>Histórico de Visitantes</h1>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Horário</th>
+                                        <th>Visitante</th>
+                                        <th>Apartamento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>25/04/2023</td>
+                                        <td>10:00</td>
+                                        <td>João Silva</td>
+                                        <td>Apt. 101</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26/04/2023</td>
+                                        <td>14:30</td>
+                                        <td>Maria Souza</td>
+                                        <td>Apt. 203</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27/04/2023</td>
+                                        <td>16:00</td>
+                                        <td>Lucas Almeida</td>
+                                        <td>Apt. 301</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28/04/2023</td>
+                                        <td>08:45</td>
+                                        <td>Camila Oliveira</td>
+                                        <td>Apt. 402</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29/04/2023</td>
+                                        <td>11:30</td>
+                                        <td>Roberto Santos</td>
+                                        <td>Apt. 501</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29/04/2023</td>
+                                        <td>15:00</td>
+                                        <td>Luciana Lima</td>
+                                        <td>Apt. 201</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="assembleias" class="assembleias">
+                <div class="title">
+                    <i class="uil uil-comments"></i>
+                    <span class="text">Assembleias</span>
+                </div>
+                <button class="all-button" onclick="openModal(8)">Registrar Assembleia</button>
+                <div id="modal-8" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal(8)">&times;</span>
+                        <div class="modal-title">Registrar Assembleia</div>
+                        <div class="modal-body">
+                            <div class="chat2">
+                                <div class="chat-input2">
+                                    <input type="text" placeholder="Registre sua ocorrência" id="chatInput2">
+                                    <button id="chatButton2">Enviar</button>
+                                </div>
+                                <div class="chat-box2" id="chatBox2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="emergencias" class="emergencias">
+                <div class="title">
+                    <i class="uil uil-exclamation-triangle"></i>
+                    <span class="text">Emergencias</span>
+                </div>
+
+                <button class="all-button" onclick="openModal(9)">Lista de Contatos</button>
+
+                <div id="modal-9" class="modalnum">
+                    <div class="modal-contentnum">
+                        <span class="closenum" onclick="closeModal(9)">&times;</span>
+                        <div class="modal-titlenum">Lista de telefones</div>
+                        <div class="modal-bodynum">
+                            <li><i class="uil uil-user"></i> <span>Polícia:</span> <a href="tel:190">190</a></li>
+                            <li><i class="uil uil-user"></i> <span>Bombeiros:</span> <a href="tel:193">193</a></li>
+                            <li><i class="uil uil-user"></i> <span>SAMU:</span> <a href="tel:192">192</a></li>
+                            <li><i class="uil uil-user"></i> <span>Defesa Civil:</span> <a href="tel:199">199</a>
+                            </li>
+                            <li><i class="uil uil-user"></i> <span>Portaria:</span> <a href="tel:0112345678">(11)
+                                    2345-6789</a></li>
+                            <li><i class="uil uil-user"></i> <span>Administração:</span> <a href="tel:0112345678">(11)
+                                    2345-6789</a></li>
+                            <li><i class="uil uil-user"></i> <span>Síndico:</span> <a href="tel:0112345678">(11)
+                                    2345-6789</a></li>
+                            <li><i class="uil uil-user"></i> <span>Segurança:</span> <a href="tel:0112345678">(11)
+                                    2345-6789</a></li>
+                            <li><i class="uil uil-user"></i> <span>Manutenção:</span> <a href="tel:0112345678">(11)
+                                    2345-6789</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="boletos" class="boletos">
+                <div class="title">
+                    <i class="uil uil-files-landscapes-alt"></i>
+                    <span class="text">Boletos</span>
+                </div>
+
+                <button class="all-button" onclick="openModal(18)">2a Via Boletos</button>
+
+                <div id="modal-18" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2" onclick="closeModal(18)">&times;</span>
+                        <div class="modal-body">
+                            <h2>2via Boleto</h2>
+                            <li><a href="./Docs/2viaboleto.pdf" id="generate-invite-link" target="_blank">Gerar
+                                    2via de boletos</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="classificados" class="classificados">
+                <div class="title">
+                    <i class="uil uil-newspaper"></i>
+                    <span class="text">Classificados</span>
+                </div>
+
+                <button class="all-button" onclick="openModal(11)" class="modal-button">Unidades disponíveis</button>
+
+                <div id="modal-11" class="modalage">
+                    <div class="modal-contentage">
+                        <span class="closeage" onclick="closeModal(11)">&times;</span>
+                        <div class="modal-titleage">Unidades disponíveis</div>
+                        <div class="modal-bodyage">
+                            <ul>
+                                <li><i class="uil uil-home"></i> <span>Unidades para venda:</span>
+                                    <ul>
+                                        <li>Apartmento 101 - R$ 500.000,00 <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                        <li>Apartmento 201 - R$ 600.000,00 <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                        <li>Apartmento 301 - R$ 700.000,00 <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                    </ul>
+                                </li>
+                                <li><i class="uil uil-home"></i> <span>Unidades para aluguel:</span>
+                                    <ul>
+                                        <li>Apartmento 102 - R$ 2.000,00/mês <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                        <li>Apartmento 202 - R$ 2.500,00/mês <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                        <li>Apartmento 302 - R$ 3.000,00/mês <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                    </ul>
+                                </li>
+                                <li><i class="uil uil-home"></i> <span>Outras unidades:</span>
+                                    <ul>
+                                        <li>Garagem 01 - R$ 100.000,00 <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                        <li>Garagem 02 - R$ 120.000,00 <button class="btnage btn-primaryage"
+                                                onclick="alert('Visita agendada!')">Agendar
+                                                visita</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cadastros" class="cadastros">
+                    <div class="title">
+                        <i class="uil uil-plus-square"></i>
+                        <span class="text">Cadastros</span>
+                    </div>
+
+                    <button class="all-button" onclick="openModal(12)">Cadastrar</button>
+
+                    <div id="modal-12" class="modalcad">
+                        <div class="modal-contentcad">
+                            <span class="closecad" onclick="closeModal(12)">&times;</span>
+                            <h2>Cadastro</h2>
+                            <form>
+                                <label>Tipo:</label>
+                                <select id="tipo" name="tipo">
+                                    <option value="morador">Morador</option>
+                                    <option value="visitante">Visitante</option>
+                                    <option value="funcionario">Funcionário</option>
+                                </select>
+                                <br><label>Nome:</label>
+                                <input type="text" id="nome" name="nome" required><br>
+                                <label>Email:</label>
+                                <input type="email" id="email" name="email" required><br>
+                                <label>Senha:</label>
+                                <input type="password" id="senha" name="senha" required><br>
+                                <label>Confirmar senha:</label>
+                                <input type="password" id="confirmar-senha" name="confirmar-senha" required><br>
+                                <label>Telefone:</label>
+                                <input type="tel" id="telefone" name="telefone"><br>
+                                <label>Endereço:</label>
+                                <input type="text" id="endereco" name="endereco"><br>
+                                <label>Cidade:</label>
+                                <input type="text" id="cidade" name="cidade"><br>
+                                <label>Estado:</label>
+                                <input type="text" id="estado" name="estado"><br>
+                                <button type="submit" onclick="alert('Cadastro concluido!')">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="veiculos" class="veiculos">
+                    <div class="title">
+                        <i class="uil uil-car"></i>
+                        <span class="text">Veiculos</span>
+                    </div>
+
+                    <button class="all-button" onclick="openModal(13)">Veiculos e Vagas</button>
+
+                    <div id="modal-13" class="modalcad">
+                        <div class="modal-contentcad">
+                            <span class="closecad" onclick="closeModal(13)">&times;</span>
+                            <h2>Cadastro</h2>
+                            <form>
+                                <label>Tipo:</label>
+                                <select id="tipo2" name="tipo2">
+                                    <option value="Carro">Carro</option>
+                                    <option value="Bicicleta">Bicicleta</option>
+                                    <option value="Motocicleta">Motocicleta</option>
+                                    <option value="Vagas">Vagas</option>
+                                </select>
+                                <br><label for="modelo">Modelo:</label>
+                                <input type="text" id="modelo" name="modelo"><br>
+                                <label><label for="cor">Cor:</label>
+                                    <input type="text" id="cor" name="cor"><br>
+                                    <label><label for="placa">Placa:</label>
+                                        <input type="text" id="placa" name="placa"><br>
+                                        <label for="marca">Marca:</label>
+                                        <input type="text" id="marca" name="marca"><br>
+                                        <label for="num-serie">Número de Série:</label>
+                                        <input type="text" id="num-serie" name="num-serie"><br>
+                                        <label for="observacoes">Observações:</label>
+                                        <textarea id="observacoes" name="observacoes"></textarea><br>
+                                        <button type="submit" onclick="alert('Cadastro concluido!')">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="financeiro" class="financeiro">
+                    <div class="title">
+                        <i class="uil uil-money-bill"></i>
+                        <span class="text">Financeiro</span>
+                    </div>
+
+                    <button class="all-button" onclick="openModal(14)">Nova transação</button>
+
+                    <div id="modal-14" class="modalcad">
+                        <div class="modal-contentcad">
+                            <span class="closecad" onclick="closeModal(14)">&times;</span>
+                            <h2>Nova Transação</h2>
+                            <form>
+                                <label>Tipo de transação:</label>
+                                <select id="tipo-transacao" name="tipo-transacao">
+                                    <option value="despesa">Despesa</option>
+                                    <option value="receita">Receita</option>
+                                </select>
+                                <br>
+                                <label>Descrição:</label>
+                                <input type="text" id="descricao" name="descricao" required><br>
+                                <label>Valor:</label>
+                                <input type="number" id="valor" name="valor" required><br>
+                                <label>Data:</label>
+                                <input type="date" id="data" name="data" required><br>
+                                <label>Categoria:</label>
+                                <select id="categoria" name="categoria">
+                                    <option value="condominio">Condomínio</option>
+                                    <option value="manutencao">Manutenção</option>
+                                    <option value="seguranca">Segurança</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                                <br>
+                                <button type="submit" onclick="alert('Transação concluida!')">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <div class="title">
+                        <i class="uil uil-clock-three"></i>
+                        <span class="text">Atividade Recente</span>
+                    </div>
+
+                    <div id="activity-data" class="activity-data">
+                        <div class="data names">
+                            <span class="data-title">Nome</span>
+                            <span class="data-list">Prem Shahi</span>
+                            <span class="data-list">Deepa Chand</span>
+                            <span class="data-list">Manisha Chand</span>
+                            <span class="data-list">Pratima Shahi</span>
+                            <span class="data-list">Man Shahi</span>
+                            <span class="data-list">Ganesh Chand</span>
+                            <span class="data-list">Bikash Chand</span>
+                        </div>
+                        <div class="data email">
+                            <span class="data-title">Email</span>
+                            <span class="data-list">premshahi@gmail.com</span>
+                            <span class="data-list">deepachand@gmail.com</span>
+                            <span class="data-list">prakashhai@gmail.com</span>
+                            <span class="data-list">manishachand@gmail.com</span>
+                            <span class="data-list">pratimashhai@gmail.com</span>
+                            <span class="data-list">manshahi@gmail.com</span>
+                            <span class="data-list">ganeshchand@gmail.com</span>
+                        </div>
+                        <div class="data joined">
+                            <span class="data-title">Entrou</span>
+                            <span class="data-list">2022-02-12</span>
+                            <span class="data-list">2022-02-12</span>
+                            <span class="data-list">2022-02-13</span>
+                            <span class="data-list">2022-02-13</span>
+                            <span class="data-list">2022-02-14</span>
+                            <span class="data-list">2022-02-14</span>
+                            <span class="data-list">2022-02-15</span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

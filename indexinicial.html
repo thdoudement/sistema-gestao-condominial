@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCondomínio</title>
+
+    <!-- font legal  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./styleinicial.css">
+
+</head>
+
+<body>
+
+    <!-- começo header  -->
+
+    <header class="header">
+
+        <a class="logo">
+            <img src="./Images/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+
+    </header>
+
+    <!-- final header -->
+
+    <!-- começo login -->
+
+    <div class="wrapper">
+        <div class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </div>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" id="login" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="senha" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Lembrar de mim</label>
+                    <a class="Fixfds">Esqueci a senha</a>
+                </div>
+                <button type="submit" class="btnsubmit" onclick="logar(); return false">Login</button>
+                <div class="login-register">
+                    <p>Não possui uma conta? <a class="register-link Fixfds">Registrar</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registrar</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Eu concordo com os termos de uso.</label>
+                </div>
+                <button type="submit" class="btnsubmit">Registrar</button>
+                <div class="login-register">
+                    <p>Já possui uma conta? <a class="login-link Fixfds">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- final login -->
+
+    <!-- começo inicio  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Gestão de Condomínios</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio
+                tempora reiciendis.</p>
+            <a href="#contact" class="btn">Contrate</a>
+        </div>
+
+    </section>
+
+    <!-- final inicio -->
+
+    <!-- começo sobre  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>Sobre</span> nós </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./Images/about-img.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Atuamos com Administração de Condomínios em Brasília-DF e Região</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora
+                    ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil
+                    voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                <a href="#contact" class="btn">Saiba mais</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- final sobre -->
+
+    <!-- começo review  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> Avaliações <span>de Clientes</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./Images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                    nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                    vel? Nemo.</p>
+                <img src="images/pic-1.jpg" class="user" alt="">
+                <h3>Prof. Fabiano</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                    nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                    vel? Nemo.</p>
+                <img src="images/pic-2.jpg" class="user" alt="">
+                <h3>Prof. Nathaniel</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                    nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                    vel? Nemo.</p>
+                <img src="images/pic-3.jpg" class="user" alt="">
+                <h3>Prof. Rafael</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- final review -->
+
+    <!-- começo contato  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> Informações <span>de Contato</span> </h1>
+
+        <div class="row">
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3518333419024!2d-48.027561899999995!3d-15.838095099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3007939d5fab%3A0x9a402d65a6de3ba8!2sCentro%20Universit%C3%A1rio%20Planalto%20do%20Distrito%20Federal%20-%20%C3%81guas%20Claras!5e0!3m2!1spt-BR!2sbr!4v1679373978693!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="">
+                <h3>ENTRAR EM CONTATO</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Nome">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Telefone">
+                </div>
+                <input type="submit" value="Contate agora" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- final começo -->
+
+    <!-- começo footer  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+    </section>
+
+    <!-- final footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js link  -->
+    <script src="./scriptinicial.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
