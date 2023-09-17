@@ -1,6 +1,5 @@
-# PIM3
-Sistema de gestão condominial - PIM
-Trabalho PIM - Aviso Importante
+# Sistema de gestão condominial
+Aviso Importante:
 
 Prezados leitores,
 
@@ -16,6 +15,4 @@ Agradecemos desde já pela compreensão e apoio. Caso você tenha alguma dúvida
 
 Atenciosamente,
 
-[Thiago Gomes Doudement]
-[Analise e desenvolvimento de sistemas]
-[UNIPLAN]
+Thiago Gomes Doudement
