@@ -1,4 +1,8 @@
 # Sistema de gestão condominial
+
+![Screenshot_1](https://github.com/thdoudement/sistema-gestao-condominial/assets/110927878/f6769500-d59b-4994-a500-7f553991bebd)
+
+
 Aviso Importante:
 
 Prezados leitores,
